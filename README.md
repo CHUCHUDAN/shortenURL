@@ -4,7 +4,9 @@
 
 專案畫面
 ---
-
+![image](https://github.com/CHUCHUDAN/shortenURL/blob/main/public/images/index.png)
+-------
+![image](https://github.com/CHUCHUDAN/shortenURL/blob/main/public/images/result.png)
 -------
 Features - 產品功能
 -----
@@ -25,11 +27,11 @@ Installing - 專案安裝流程
 ----
 1.打開你的 terminal，Clone 此專案至本機電腦
 
-    git clone https://github.com/CHUCHUDAN/restaurant_list_refactor.git
+    git clone https://github.com/CHUCHUDAN/shortenURL.git
     
 2.開啟終端機(Terminal)，進入存放此專案的資料夾
 
-    cd restaurant_list_refactor
+    cd shortenURL
     
 3.安裝 express 套件
 
@@ -49,13 +51,9 @@ Installing - 專案安裝流程
     
 7.當 terminal 出現以下字樣，表示伺服器啟動成功並與資料庫連線成功
 
-    The web is Listen on http://localhost:3000
+    app is runing on http://localhost:3000
     Mongodb connected!
-    
-8.如需使用種子資料請輸入指令
-
-    在 Terminal 輸入 npm run seed 指令
-    
+      
 Contributor - 專案開發人員
 -----
 [Daniel Chu](https://github.com/CHUCHUDAN)

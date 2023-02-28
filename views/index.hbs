@@ -1,0 +1,11 @@
+<form novalidate  method="POST" action="/shorten" class="index-form-input ">
+  <input class="index-url-input form-control" type="url" name="link" placeholder="input URL here" pattern="https?://.+" required>
+  <div class="invalid-feeback">
+    請填寫正確的網址格式
+  </div>
+  <div class="valid-feeback">
+    格式正確
+  </div>
+  <button class="index-url-button action" type="submit">Shorten</button>
+</form>
+<script src="/javascripts/index.js"></script>

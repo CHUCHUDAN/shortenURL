@@ -1,0 +1,205 @@
+/* CSS reset */
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap&subset=chinese-traditional");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  /* 設定字型 */
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  line-height: 0.9;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  /* 拿掉前方圈圈 */
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  /* 拿掉底線 */
+}
+
+/* 設定共用樣式 */
+/* 設定區塊寬度一致並置中 */
+.container {
+  width: 85%;
+  min-height: 600px;
+  max-height: auto;
+  margin: 0 auto 3rem auto;
+}
+
+.background-image {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nav-link {
+  color: black;
+}
+
+.action:hover {
+  background: #2894FF;
+  /* 陰影 */
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+  box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+}
+
+/* porject */
+
+/* main */
+.container {
+  margin-top: 50px;
+  border: 2px solid #D0D0D0;
+  text-align: center;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.link-img-a {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url('/images/Link.png');
+}
+
+
+/* index */
+
+.index-form-input {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.index-url-input {
+  border: 2px solid #D0D0D0;
+  background: #F0F0F0;
+  width: 50%;
+  height: 40px;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #8E8E8E;
+  padding: 10px;
+  /* 陰影 */
+  -webkit-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.index-url-button {
+  border: none;
+  width: 100px;
+  height: 50px;
+  font-size: 1rem;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #66B3FF;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  /* 陰影 */
+  -webkit-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* 表單驗證 */
+form.was-validated .form-control:invalid {
+  border-color: red;
+}
+
+form.was-validated .form-control:valid {
+  border-color: green;
+}
+
+.invalid-feeback {
+  margin-top: 10px;
+  color: red;
+  display: none;
+}
+
+.valid-feeback {
+  margin-top: 10px;
+  color: green;
+  display: none;
+}
+
+form.was-validated .form-control:invalid~.invalid-feeback,
+form.was-validated .form-control:valid~.valid-feeback {
+  display: initial;
+  text-align: left;
+}
+
+/* result */
+
+.result-description {
+  margin-top: 40px;
+  display: flex;
+  height: 150px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.result-copy-button {
+  border: none;
+  border-radius: 20px;
+  background: #66B3FF;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  /* 陰影 */
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+  box-shadow: 0px 1px 5px 0px rgba(87, 87, 87, 1);
+}
+
+.result-copied-button {
+  pointer-events: none;
+  opacity: 0.5;
+}

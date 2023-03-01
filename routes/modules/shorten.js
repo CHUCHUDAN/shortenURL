@@ -26,19 +26,20 @@ function generateRandomCode() {
 router.post('/', (req, res) => {
   const linkKeyword = req.body.link
   if (!linkKeyword) return //若使用者沒有輸入內容，就按下了送出鈕，需要防止表單送出並提示使用者
-  Link.find()
+  Link.findOne({ originURL: linkKeyword })
     .lean()
-    .then(links => {
-      const searchResult = links.find(link => link.originURL === linkKeyword)
-      if (searchResult) {     // 輸入相同網址時，產生一樣的縮址
-        const result = searchResult.fixedURL
+    .then(link => {
+      if (link) {// 輸入相同網址時，產生一樣的縮址
+        const result = link.fixedURL
         return res.render('result', { result })
       }
       const name = generateRandomCode()
       const originURL = linkKeyword
       const fixedURL = `http://localhost:3000/link/${name}`
       Link.create({ name, originURL, fixedURL })
-        .then(() => res.render('result', { result: fixedURL }))
+        .then(() => {
+          return res.render('result', { result: fixedURL })
+        })
         .catch(error => console.log(error))
     })
     .catch(error => console.log(error))
